@@ -15,6 +15,10 @@ app.use(express.static(__dirname + '/../public'));
 io.on('connection', function(socket) {
 	console.log("New connection!");
 
+	socket.on('set nick', function(data) {
+		console.log("Set Nick: " + data.nick);
+	});
+
 	socket.on('disconnect', function() {
 		console.log("Disconnect!");
 	});

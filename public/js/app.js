@@ -19,6 +19,7 @@ function startGame() {
     document.getElementById('startMenuWrapper').style.display = 'none';
     socket = io();
     SetupSocket(socket);
+    game.setNick(playerName);
     animloop();
 }
 

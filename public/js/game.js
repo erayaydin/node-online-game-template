@@ -1,7 +1,7 @@
 function Game() { };
 
 Game.prototype.handleNetwork = function(socket) {
-  
+  this.socket = socket;
 }
 
 Game.prototype.handleLogic = function() {
@@ -20,4 +20,8 @@ Game.prototype.handleGraphics = function(gfx) {
   gfx.lineWidth = 2;
   gfx.fillText('Now playing...', screenWidth / 2, screenHeight / 2);
   gfx.strokeText('Now playing...', screenWidth / 2, screenHeight / 2);
+}
+
+Game.prototype.setNick = function(nick) {
+  this.socket.emit('set nick', { nick: nick });
 }
