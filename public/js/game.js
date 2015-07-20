@@ -9,7 +9,6 @@ Game.prototype.handleLogic = function() {
 }
 
 Game.prototype.handleGraphics = function(gfx) {
-  // This is where you draw everything
   gfx.fillStyle = '#fbfcfc';
   gfx.fillRect(0, 0, screenWidth, screenHeight);
 
@@ -18,10 +17,11 @@ Game.prototype.handleGraphics = function(gfx) {
   gfx.font = 'bold 50px Verdana';
   gfx.textAlign = 'center';
   gfx.lineWidth = 2;
-  gfx.fillText('Now playing...', screenWidth / 2, screenHeight / 2);
-  gfx.strokeText('Now playing...', screenWidth / 2, screenHeight / 2);
+  gfx.fillText(this.nick, screenWidth / 2, screenHeight / 2);
+  gfx.strokeText(this.nick, screenWidth / 2, screenHeight / 2);
 }
 
 Game.prototype.setNick = function(nick) {
   this.socket.emit('set nick', { nick: nick });
+  this.nick = nick;
 }
