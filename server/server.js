@@ -9,6 +9,10 @@ app.use(express.static(__dirname + '/../client'));
 
 io.on('connection', function(socket) {
 	console.log("New connection!");
+
+	socket.on('disconnect', function() {
+		console.log("Disconnect!");
+	});
 });
 
 var serverPort = process.env.PORT || config.port;
