@@ -1,0 +1,29 @@
+{
+  "name": "node-online-game-template",
+  "version": "0.0.1",
+  "description": "NodeJS Online Game Template",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erayaydin/node-online-game-template.git"
+  },
+  "dependencies": {
+    "express": "^4.13.0",
+    "socket.io": "^1.3.5"
+  },  
+  "keywords": [
+    "online",
+    "game",
+    "template",
+    "nodejs"
+  ],
+  "author": "Eray Aydın",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erayaydin/node-online-game-template/issues"
+  },
+  "homepage": "https://github.com/erayaydin/node-online-game-template#readme"
+}
